@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    display: inline-block;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+p {
+    margin: 0;
+}
+
+.sectionForm {
+    margin: 5px auto 0px;
+}
+
+.tableForm {
+    margin: 10px auto;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.textAlignLeft {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: 700;
+}
+
+.firstTr {
+    margin-bottom: 45px;
+}
+
+.buttonSubmit, .buttonReset, .buttonPrint {
+    font-family: 'Lato', sans-serif;
+    background-color: #dedede;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #6a6a6a;
+    padding: 3px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input {
+    padding: 3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 1px 0px;
+}
+
+.result {
+    padding: 0px;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.result__table--td {
+    border-bottom: 1px solid #000;
+    border-collapse: collapse;
+        padding: 3px 10px;
+}
+
+.paragraphBigger {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.inputSmaller {
+    width: 130px;
+}
+
+.footer {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.header1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.header1__paragraph {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.blue {
+    color: #0762ff;
+    margin: 0px auto 5px;
+}
+
+.warning {
+    color: red;
+}
+
+.noMarginBottom {
+    margin-bottom: 0px;
+}
+
+@media print {
+    .sectionForm {
+        display: none;
+    }
+
+    .tableForm {
+        display: none;
+    }
+
+    .buttonSubmit, .buttonReset {
+        display: none;
+    }
+
+    .buttonPrint {
+        display: none;
+    }
+
+    .blue {
+        display: none;
+    }
+
+    .header1__paragraph {
+        margin-bottom: 50px;
+    }
+
+}

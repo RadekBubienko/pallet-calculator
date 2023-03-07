@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <title>Kalkulator palet</title>
+  </head>
+
+  <body>
+    <h1 class="header1">Kalkulator Palet</h1>
+    <p class="header1__paragraph">&copy; by Radek Bubienko</p>
+    <section class="sectionForm">
+      <form class="form js-form">
+        <table class="tableForm">
+          <tr>
+            <td class="textAlignRight result__table--td">Numer zamówienia:</td>
+            <td>
+              <input
+                id="orderNumber"
+                class="input js-orderNumber"
+                type="text"
+                placeholder="niekoniecznie"
+                autofocus
+                value=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">Wersja:</td>
+            <td>
+              <input
+                class="input js-version"
+                type="text"
+                placeholder="niekoniecznie"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">Wpisz nakład:</td>
+            <td>
+              <input
+                class="input js-edition"
+                type="number"
+                placeholder="wpisz nakład"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość książek w pudełku:
+            </td>
+            <td><input class="input js-numberBooksInBox" type="number" required/></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pudełek na warstwie:
+            </td>
+            <td><input class="input js-boxesPerLayer" type="number" required/></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">Ilość warstw:</td>
+            <td><input class="input js-numberOfLayers" type="number" required/></td>
+          </tr>
+        </table>
+        <p><button type="submit" class="buttonSubmit">Przelicz</button></p>
+      </form>
+    </section>
+    <section class="results">
+      <p class="warning js-warning"></p>
+      <div class="result">
+        <p class="paragraphBigger">
+          Numer zamówienia: <span class="js-orderNumberResult"></span>
+        </p>
+        <p><small>wersja: </small><span class="js-versionResult"></span></p>
+        <table class="result__table">
+          <tr>
+            <td class="textAlignRight result__table--td">Nakład:</td>
+            <td class="textAlignLeft result__table--td"><span class="js-editionResult"></span> egz.</td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość książek w pudełku:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInBoxResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pudełek na warstwie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-boxesPerLayerResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">Ilość warstw:</td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberOfLayersResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pełnych palet:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberFullPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość książek na pełnej palecie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInFullPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              <p class="noMarginBottom"><strong>Ostatnia paleta</strong></p>
+            </td>
+            <td class="textAlignLeft result__table--td"></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość książek na ostatniej palecie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInLastPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pełnych warstw na ostatniej palecie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberLayersInLastPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pełnych pudełek na ostatniej palecie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBoxInLastPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość pełnych pudełek na ostatniej warstwie:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBoxInLastLayerOnLastPalletResult"></span></td>
+          </tr>
+          <tr>
+            <td class="textAlignRight result__table--td">
+              Ilość książek w ostatnim niepełnym pudełku:
+            </td>
+            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInLastBoxResult"></span></td>
+          </tr>
+        </table>
+      </div>
+      <button class="buttonPrint" onclick="window.print()">Drukuj</button>
+    </section>
+    <footer>
+      <p class="footer">&copy; by Radek Bubienko</p>
+    </footer>
+  </body>
+</html>
