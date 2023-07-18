@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,9 +28,8 @@
                 id="orderNumber"
                 class="input js-orderNumber"
                 type="text"
-                placeholder="niekoniecznie"
+                placeholder="not necessary"
                 autofocus
-                value=""
               />
             </td>
           </tr>
@@ -40,7 +39,7 @@
               <input
                 class="input js-version"
                 type="text"
-                placeholder="niekoniecznie"
+                placeholder="not necessary"
               />
             </td>
           </tr>
@@ -50,7 +49,7 @@
               <input
                 class="input js-edition"
                 type="number"
-                placeholder="wpisz nakład"
+                placeholder="enter edition"
                 required
               />
             </td>
@@ -59,20 +58,44 @@
             <td class="textAlignRight result__table--td">
               Ilość książek w pudełku:
             </td>
-            <td><input class="input js-numberBooksInBox" type="number" required/></td>
+            <td>
+              <input
+                class="input js-numberBooksInBox"
+                type="number"
+                placeholder="number of books in a box"
+                required
+              />
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pudełek na warstwie:
             </td>
-            <td><input class="input js-boxesPerLayer" type="number" required/></td>
+            <td>
+              <input
+                class="input js-boxesPerLayer"
+                type="number"
+                placeholder="number of boxes on a layer"
+                required
+              />
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">Ilość warstw:</td>
-            <td><input class="input js-numberOfLayers" type="number" required/></td>
+            <td>
+              <input
+                class="input js-numberOfLayers"
+                type="number"
+                placeholder="number of layers"
+                required
+              />
+            </td>
           </tr>
         </table>
-        <p><button type="submit" class="buttonSubmit">Przelicz</button></p>
+        <p>
+          <button type="submit" class="buttonSubmit">Przelicz</button
+          ><button type="reset" class="buttonSubmit">Wyczyść</button>
+        </p>
       </form>
     </section>
     <section class="results">
@@ -81,39 +104,51 @@
         <p class="paragraphBigger">
           Numer zamówienia: <span class="js-orderNumberResult"></span>
         </p>
-        <p><small>wersja: </small><span class="js-versionResult"></span></p>
+        <p>wersja: <span class="js-versionResult"></span></p>
         <table class="result__table">
           <tr>
             <td class="textAlignRight result__table--td">Nakład:</td>
-            <td class="textAlignLeft result__table--td"><span class="js-editionResult"></span> egz.</td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-editionResult"></span> egz.
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość książek w pudełku:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInBoxResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBooksInBoxResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pudełek na warstwie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-boxesPerLayerResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-boxesPerLayerResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">Ilość warstw:</td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberOfLayersResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberOfLayersResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pełnych palet:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberFullPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberFullPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość książek na pełnej palecie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInFullPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBooksInFullPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
@@ -126,31 +161,41 @@
             <td class="textAlignRight result__table--td">
               Ilość książek na ostatniej palecie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInLastPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBooksInLastPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pełnych warstw na ostatniej palecie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberLayersInLastPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberLayersInLastPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pełnych pudełek na ostatniej palecie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBoxInLastPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBoxInLastPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość pełnych pudełek na ostatniej warstwie:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBoxInLastLayerOnLastPalletResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBoxInLastLayerOnLastPalletResult"></span>
+            </td>
           </tr>
           <tr>
             <td class="textAlignRight result__table--td">
               Ilość książek w ostatnim niepełnym pudełku:
             </td>
-            <td class="textAlignLeft result__table--td"><span class="js-numberBooksInLastBoxResult"></span></td>
+            <td class="textAlignLeft result__table--td">
+              <span class="js-numberBooksInLastBoxResult"></span>
+            </td>
           </tr>
         </table>
       </div>
